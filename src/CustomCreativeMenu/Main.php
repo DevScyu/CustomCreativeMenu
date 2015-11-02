@@ -68,6 +68,7 @@ class Main extends PluginBase implements Listener{
 		  ],
 		)));
 	}
+	$this->customCreativeMenu = new Config($this->getDataFolder()."config.yml", Config::YAML);
 	if($this->customCreativeMenu->get("Eggs") === false){
 		foreach($this->customCreativeMenu->get("EggMeta") as $damagevalue){
 		Item::removeCreativeItem(Item::get(383, $damagevalue)); 
